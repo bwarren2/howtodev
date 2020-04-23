@@ -19,14 +19,15 @@ services:
       - howtodev-database
     env_file: ./howtodev-server/.env
     ports:
-      - 8080
+      - "8080:8080"
     volumes:
       - ./howtodev-server:/usr/src/app/howtodev-server
 
   howtodev-vue:
     build:
       context: ./howtodev-vue
-    command: vue ui -H 0.0.0.0 -p 8000
+    # command: vue ui -H 0.0.0.0 -p 8000
+    command: yarn serve --mode development --port 8001 --dashboard
     container_name: howtodev-vue
     depends_on:
       - howtodev-server

@@ -4,6 +4,12 @@
 
 Bring it up with `docker-compose up`
 
+Vue is served on `http://localhost:8001/`
+
+Django is served on `http://localhost:8080/`, with the API root at `http://localhost:8080/api/`.
+
+If you want to use the vue UI, swap the commented/uncommented commands in `howtodev-vue` in `docker-compose.yml`.
+
 ## Database setup
 
 Bring it up, then
